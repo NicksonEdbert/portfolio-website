@@ -19,7 +19,7 @@ export default function ProjectCard({
     return (
         <a
             target="_blank"
-            className="block p-4 md:p-8 border border-[#969696] rounded-lg relative">
+            className="block p-4 md:p-8 border border-[#969696] rounded-lg relative mb-20">
             <h3 className="text-xl md:text-2xl font-medium mb-4">{title}</h3>
             <p className="text-sm text-[#fefeff] mb-6">{description}</p>
             <div className="flex flex-wrap gap-4">
