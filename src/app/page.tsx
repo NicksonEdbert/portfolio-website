@@ -64,12 +64,12 @@ export default function Home() {
                                 I&apos;m a fresh graduate currently working as a
                                 manufacturing technician at HP Inc., though my
                                 true passion lies in software engineering and
-                                data science. Based in Seattle, WA, I thrive in an office
-                                environment where I can engage with technology
-                                and innovative ideas. I&apos;ve also had the
-                                opportunity to work with Parchment—a startup in
-                                Austin, TX—which further fueled my drive to grow
-                                in the tech space.
+                                data science. Based in Seattle, WA, I thrive in
+                                an office environment where I can engage with
+                                technology and innovative ideas. I&apos;ve also
+                                had the opportunity to work with Parchment—a
+                                startup in Austin, TX—which further fueled my
+                                drive to grow in the tech space.
                             </p>
                         </div>
                     </div>
@@ -82,7 +82,7 @@ export default function Home() {
                                 tackle them steadily and consistently. I believe
                                 in exploring different perspectives and
                                 embracing failures as valuable learning
-                                opportunities. 
+                                opportunities.
                             </p>
                         </div>
                     </div>
@@ -101,8 +101,8 @@ export default function Home() {
                                 playing sports, with basketball and golf being
                                 my current focus, and I find creative
                                 satisfaction in personal projects—most notably,
-                                this portfolio website, which I&apos;m incredibly
-                                proud of.
+                                this portfolio website, which I&apos;m
+                                incredibly proud of.
                             </p>
                         </div>
                     </div>
@@ -112,11 +112,11 @@ export default function Home() {
                             <p className="text-sm text-[#fefeff]">
                                 Looking ahead, my ambition is to build the
                                 capital and expertise necessary to launch my own
-                                business. While I&apos;m still at the beginning of my
-                                professional journey and eager to connect with
-                                mentors and peers, I am committed to continuous
-                                growth and innovation in every aspect of my
-                                work.
+                                business. While I&apos;m still at the beginning
+                                of my professional journey and eager to connect
+                                with mentors and peers, I am committed to
+                                continuous growth and innovation in every aspect
+                                of my work.
                             </p>
                         </div>
                     </div>
@@ -124,7 +124,63 @@ export default function Home() {
             </section>
             <section
                 id="contact"
-                className="min-h-screen flex flex-col items-center justify-center px-4"></section>
+                className="min-h-screen flex flex-col items-center justify-center px-4">
+                <div className="grid md:grid-cols-3 gap-8">
+                    <div className="md:col-span-2 md:col-start-2">
+                        <div className="space-y-8 max-w-2xl">
+                            {/* <Image
+                                src="/charan.JPG"
+                                alt="Charan Ravi"
+                                width={500}
+                                height={300}
+                                className="mb-8"
+                            /> */}
+                            <p className="text-xl md:text-xl text-[#fefeff] underline">
+                                nicksonedbert@gmail.com
+                            </p>
+                            <div className="flex items-center gap-2">
+                                <div className="relative">
+                                    <div className="w-2 h-2 bg-[#fefeff] rounded-full animate-pulse"></div>
+                                    <div className="absolute top-0 left-0 w-2 h-2 bg-[#fefeff] rounded-full animate-[ping_1.5s_ease-in-out_infinite] opacity-90"></div>
+                                </div>
+                                <p className="text-l text-[#969696]">
+                                    Looking for new opportunities.
+                                </p>
+                            </div>
+                            <div className="flex gap-8 pt-8">
+                                <a
+                                    href="https://www.linkedin.com/in/nicksonedbert/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm">
+                                    LinkedIn
+                                </a>
+                                <a
+                                    href="https://github.com/NicksonEdbert"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm">
+                                    GitHub
+                                </a>
+                                {/* <a
+                                    href="https://x.com/charanjson"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm">
+                                    X [Twitter]
+                                </a> */}
+                                <a
+                                    href="https://instagram.com/nicksonedbert"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-[#969696] hover:text-[#fefeff] transition-colors text-sm">
+                                    Instagram
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 }
