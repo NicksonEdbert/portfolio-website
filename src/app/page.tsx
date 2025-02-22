@@ -2,14 +2,36 @@ import ProjectCard from "../components/ProjectCard";
 import ExperienceCard from "@/components/ExperienceCard";
 import { projects } from "@/data/projects";
 import { experiences } from "@/data/experiences";
+import "./globals.css";
+
+const sections = [
+    { id: "#intro", title: "Intro" },
+    { id: "#project", title: "Project" },
+    { id: "#experience", title: "Experience" },
+    { id: "#about", title: "About" },
+    { id: "#contact", title: "Contact" },
+];
 
 export default function Home() {
     return (
         <div className="bg-black">
+            <nav className="hidden md:block fixed left-8 top-1/2 -translate-y-1/2 z-40">
+                <ul>
+                    {sections.map(({ id, title }) => (
+                        <li key={id} className="mb-4 text-left">
+                            <a
+                                href={id}
+                                className="block text-[#969696] hover:text-gray-300">
+                                {title}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
             <section
                 id="intro"
                 className="min-h-screen flex flex-col items-center justify-center px-4">
-                <p className="text-xl md:text-2xl text-gray-600 max-w-[750px] text-center">
+                <p className="text-xl md:text-2xl max-w-[750px] text-center">
                     I&apos;m a developer who loves creating meaningful digital
                     experiences, with a focus on tech, minimalism, and where
                     they intersect.
@@ -135,6 +157,11 @@ export default function Home() {
                                 height={300}
                                 className="mb-8"
                             /> */}
+                            <img
+                                src="/portrait_bw.png"
+                                alt="portrait"
+                                className="w-[350px] h-auto"
+                            />
                             <p className="text-xl md:text-xl text-[#fefeff] underline">
                                 nicksonedbert@gmail.com
                             </p>
