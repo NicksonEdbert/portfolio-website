@@ -6,6 +6,7 @@ import { projects } from "@/data/projects";
 import { experiences } from "@/data/experiences";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const sections = [
     { id: "#intro", title: "Intro" },
@@ -225,7 +226,7 @@ export default function Home() {
                                 <div className="grid md:grid-cols-3 gap-8">
                                     <div className="md:col-span-2 md:col-start-2">
                                         <div className="space-y-8 max-w-2xl">
-                                            <img
+                                            <Image
                                                 src="/portrait_bw.png"
                                                 alt="portrait"
                                                 className="w-[350px] h-auto"

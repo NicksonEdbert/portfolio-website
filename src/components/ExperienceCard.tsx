@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Logo {
     src: string;
     alt: string;
@@ -21,7 +23,7 @@ export default function ExperienceCard({
     return (
         <div className="space-y-4 max-w-2xl mb-20">
             <div className="flex flex-col items-start space-y-1">
-                <img
+                <Image
                     src={logo.src}
                     alt={logo.alt}
                     className="w-[100px] h-auto mb-10"
