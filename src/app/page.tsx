@@ -106,6 +106,7 @@ export default function Home() {
                                             title={project.title}
                                             description={project.description}
                                             tags={project.tags}
+                                            link={project.link}
                                             platforms={project.platforms}
                                         />
                                     </div>
@@ -229,7 +230,10 @@ export default function Home() {
                                             <Image
                                                 src="/portrait_bw.png"
                                                 alt="portrait"
-                                                className="w-[350px] h-auto"
+                                                width={350}
+                                                height={0}
+                                                style={{ height: "auto" }} // Keeps aspect ratio
+                                                className=""
                                             />
                                             <p className="text-xl md:text-xl text-[#fefeff] underline">
                                                 nicksonedbert@gmail.com

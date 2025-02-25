@@ -26,7 +26,10 @@ export default function ExperienceCard({
                 <Image
                     src={logo.src}
                     alt={logo.alt}
-                    className="w-[100px] h-auto mb-10"
+                    width={100}
+                    height={0}
+                    style={{ height: "auto" }} // Keeps aspect ratio
+                    className="mb-10"
                 />
                 <p className="font-mono text-sm text-[#969696]">{company}</p>
             </div>
