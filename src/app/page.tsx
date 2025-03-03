@@ -69,14 +69,14 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            onClick={handleLogoClick}
             className="flex-grow"
           >
             {/* N Logo */}
             <motion.div
-              className="fixed left-4 top-8 z-50 cursor-pointer md:left-8"
+              className="fixed left-4 top-8 z-50 hidden cursor-pointer sm:block md:left-8"
               onHoverStart={() => setIsNameExpanded(true)}
               onHoverEnd={() => setIsNameExpanded(false)}
+              onClick={handleLogoClick}
               whileTap={{ scale: 0.95 }}
             >
               <div className="relative flex text-3xl font-medium">
@@ -131,11 +131,13 @@ export default function Home() {
                 id="intro"
                 className="flex min-h-screen flex-col items-center justify-center px-4"
               >
-                <p className="max-w-[750px] text-center text-xl md:text-2xl">
-                  I&apos;m a developer who loves creating meaningful digital
-                  experiences, with a focus on tech, minimalism, and where they
-                  intersect.
-                </p>
+                <div className="pt-16">
+                  <p className="max-w-[750px] text-center text-3xl md:text-6xl">
+                    I&apos;m a developer who loves creating meaningful digital
+                    experiences, with a focus on tech, minimalism, and where
+                    they intersect.
+                  </p>
+                </div>
               </section>
 
               {/* Project Section */}
