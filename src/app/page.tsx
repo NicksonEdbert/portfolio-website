@@ -18,6 +18,8 @@ const sections = [
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  const [isNameExpanded, setIsNameExpanded] = useState(false);
+  const remainingLetters = "ickson Wang".split("");
 
   // Loading Screen Timeout
   useEffect(() => {
@@ -25,6 +27,10 @@ export default function Home() {
       setLoading(false);
     }, 2500);
   }, []);
+
+  const handleLogoClick = () => {
+    window.location.reload();
+  };
 
   return (
     <div className="flex min-h-screen flex-col bg-black text-[#fefeff]">
@@ -63,8 +69,42 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
+            onClick={handleLogoClick}
             className="flex-grow"
           >
+            {/* N Logo */}
+            <motion.div
+              className="fixed left-4 top-8 z-50 cursor-pointer md:left-8"
+              onHoverStart={() => setIsNameExpanded(true)}
+              onHoverEnd={() => setIsNameExpanded(false)}
+              whileTap={{ scale: 0.95 }}
+            >
+              <div className="relative flex text-3xl font-medium">
+                <span>N</span>
+                <AnimatePresence>
+                  {isNameExpanded && (
+                    <div className="flex">
+                      {remainingLetters.map((letter, index) => (
+                        <motion.span
+                          key={index}
+                          initial={{ opacity: 0, x: -5 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          exit={{ opacity: 0, x: 5 }}
+                          transition={{
+                            duration: 0.1,
+                            delay: index * 0.02,
+                            ease: "easeOut",
+                          }}
+                        >
+                          {letter}
+                        </motion.span>
+                      ))}
+                    </div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </motion.div>
+
             {/* Header */}
             <header></header>
 
@@ -179,7 +219,6 @@ export default function Home() {
                 </div>
 
                 {/* <br /> */}
-                <br />
                 <br />
 
                 <div className="grid gap-8 md:grid-cols-3">
